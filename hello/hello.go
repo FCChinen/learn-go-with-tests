@@ -19,13 +19,13 @@ func Hello(name, language string) string {
 }
 
 func greetingPrefix(language string) (prefix string) {
-	switch language {
-	case spanish:
-		prefix = spanishHelloPrefix
-	case french:
-		prefix = frenchHelloPrefix
-	default:
-		prefix = englishHelloPrefix
+	m := map[string]string {
+		"French": "Bonjour, ",
+		"Spanish": "Hola, ",
+	}
+	prefix = m[language]
+	if prefix == "" {
+		return "Hello, "
 	}
 	return 
 }
