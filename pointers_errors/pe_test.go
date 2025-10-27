@@ -7,7 +7,7 @@ import (
 func assertNoError(t testing.TB, got error) {
 	t.Helper()
 	if got != nil {
-		t.Fatal("this should not return an error")
+		t.Fatal("this should not return an error"
 	}
 }
 
